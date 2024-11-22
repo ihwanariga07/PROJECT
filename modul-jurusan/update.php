@@ -10,6 +10,10 @@ $jrs = $_POST['jurusan'];
 #3. menulis query
 $sunting = "UPDATE jurusans SET kode='$kd', jurusan='$jrs' WHERE id='$id'";
 
+#.cancel
+
+
+
 #4. jalankan query
 $proses = mysqli_query($koneksi, $sunting);
 
