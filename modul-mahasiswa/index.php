@@ -17,7 +17,7 @@
         <div class="col-8 m-auto">
             <div class="card">
             <div class="card-header">
-                <h3 class="float-start">Data Jurusan</h3>
+                <h3 class="float-start">Data Mahasiswa</h3>
                 <span class="float-end"><a class="btn btn-primary" href="form.php"><i class="fa-solid fa-square-plus"></i> Tambah Data</a></span>
             </div>
             <div class="card-body">
@@ -25,8 +25,11 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Kode</th>
-                        <th scope="col">Nama Jurusan</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Nama Mahasiswa</th>
+                        <th scope="col">Jenis Kelamin</th>
+                        <th scope="col">Jurusan</th>
+                        <th scope="col">Dosen Wali</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -36,7 +39,7 @@
                     include("../koneksi.php");
 
                     #2. menulis query
-                    $tampil = "SELECT * FROM jurusans";
+                    $tampil = "SELECT * FROM mahasiswas";
 
                     #3. jalankan query
                     $proses = mysqli_query($koneksi, $tampil);
@@ -47,8 +50,11 @@
                     ?>
                     <tr>
                         <th scope="row"><?=$nomor++?></th>
-                        <td><?=$data['kode']?></td>
-                        <td><?=$data['jurusan']?></td>
+                        <td><?=$data['nim']?></td>
+                        <td><?=$data['nama']?></td>
+                        <td><?=$data['jns_kel']?></td>
+                        <td><?=$data['jurusan_id']?></td>
+                        <td><?=$data['dosens_id']?></td>
                         <td>
                             <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
                             

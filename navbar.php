@@ -11,7 +11,7 @@
           <a class="nav-link active" aria-current="page" href="/PROJECT/index.php">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Mahasiswa</a>
+          <a class="nav-link active" aria-current="page" href="/PROJECT/modul-mahasiswa">Data Mahasiswa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/PROJECT/modul-jurusan/index.php">Data Jurusan</a>
