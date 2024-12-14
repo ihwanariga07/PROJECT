@@ -32,10 +32,12 @@
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
-            
-               
-
+                
+                <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">
+                <a href="/PROJECT/modul-jurusan/index.php">Batal</button>
+                
             </form>
+          
             </div>
             </div>
         </div>

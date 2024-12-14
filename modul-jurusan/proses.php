@@ -13,7 +13,7 @@ $simpan = "INSERT INTO jurusans (kode,jurusan) VALUES ('$kd','$jrs')";
 $proses = mysqli_query($koneksi, $simpan);
 
 #5. mengalihkan halaman
-// header("location:index.php");
+//header("location:index.php");
 ?>
 <script>
     document.location="index.php";
