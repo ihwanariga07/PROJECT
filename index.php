@@ -20,7 +20,11 @@
             </div>
             <div class="card-body">
                 <h4>Selamat Datang, Administrator</h4>
-                <p>Tuliskan kata-kata hari ini</p>
+                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Kata-Kata Hari Ini</label>
+                    <input type="text"  class="form-control" id="exampleInputPassword1">
+                </div>
             </div>
             </div>
         </div>
