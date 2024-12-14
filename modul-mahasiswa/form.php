@@ -36,7 +36,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                    <input type="text" name="tgl_lahir" class="form-control" id="exampleInputPassword1">
+                    <input type="date" name="tgl_lahir" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Email</label>
-                    <input type="text" name="email" class="form-control" id="exampleInputPassword1">
+                    <input type="email" name="email" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
@@ -54,12 +54,37 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jurusan</label>
-                    <input type="text" name="jurusans_id" class="form-control" id="exampleInputPassword1">
+                    <select name="jabatan" class="form-control" id="">
+                        <option value="">-Pilih Jurusan-</option>
+                        <?php
+                            include('../koneksi.php');
+                            $sql_jur = "SELECT * FROM jurusans";
+                            $qry_jur = mysqli_query($koneksi,$sql_jur);
+                            foreach($qry_jur as $data_jur){
+                                ?>
+                                <option value="<?=$data_jur['id']?>"><?=$data_jur['jurusan']?></option>
+                                <?php
+                            }
+                        ?>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Dosen Wali</label>
-                    <input type="text" name="dosens_id" class="form-control" id="exampleInputPassword1">
-                </div>
+                    <select name="jabatan" class="form-control" id="">
+                        <option value="">-Pilih Dosen Wali-</option>
+                        <?php
+                            include('../koneksi.php');
+                            $sql_dos = "SELECT * FROM dosens";
+                            $qry_dos = mysqli_query($koneksi,$sql_dos);
+                            foreach($qry_dos as $data_dos){
+                                ?>
+                                <option value="<?=$data_dos['id']?>"><?=$data_dos['nama']?></option>
+                                <?php
+                            }
+                        ?>
+                    </select>
+                        </div>
+               
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Foto</label>
                     <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
