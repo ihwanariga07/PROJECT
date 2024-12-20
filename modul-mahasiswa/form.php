@@ -23,7 +23,7 @@
             <div class="card-body">
             <form action="proses.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nim</label>
+                    <label for="exampleInputEmail1" class="form-label">NIM</label>
                     <input type="text" name="nim" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
@@ -31,12 +31,12 @@
                     <input type="text" name="nama" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Tempat Lahir</label>
-                    <input type="text" name="tmp_lahir" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">Tempat lahir</label>
+                    <input type="text" name="tempat" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                    <input type="date" name="tgl_lahir" class="form-control" id="exampleInputPassword1">
+                    <input type="date" name="tanggal" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
@@ -49,12 +49,12 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
                     <br>
-                <input type="radio" name="jns_kel" value="L" class="" id="exampleInputPassword">Laki-Laki
-                <input type="radio" name="jns_kel" value="P" class="" id="exampleInputPassword">Perempuan
+                    <input type="radio" name="jns_kel" value="L" class="" id="exampleInputPassword1"> Laki Laki
+                    <input type="radio" name="jns_kel" value="P" class="" id="exampleInputPassword1"> Perempuan
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jurusan</label>
-                    <select name="jabatan" class="form-control" id="">
+                    <select name="jur" class="form-control" id="">
                         <option value="">-Pilih Jurusan-</option>
                         <?php
                             include('../koneksi.php');
@@ -70,7 +70,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Dosen Wali</label>
-                    <select name="jabatan" class="form-control" id="">
+                    <select name="dos" class="form-control" id="">
                         <option value="">-Pilih Dosen Wali-</option>
                         <?php
                             include('../koneksi.php');
@@ -83,20 +83,16 @@
                             }
                         ?>
                     </select>
-                        </div>
-               
+
+
+                </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Foto</label>
-                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputPassword1" class="form-label">Foto</label>
+                    <input type="file" accept="image/*" name="foto" class="form-control" id="exampleInputPassword1">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                
-                <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">
-                <a href="/PROJECT/modul-mahasiswa/index.php">Batal</button>
-                
             </form>
-          
             </div>
             </div>
         </div>
