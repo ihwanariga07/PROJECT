@@ -1,39 +1,61 @@
 <?php
+session_start();
+$pesan = "";
 if(isset($_POST['tombol'])){
-  #koneksi ke database
-
+  #1. koneksi database
   include_once("koneksi.php");
 
-  #mengambil value dari input
-  $email = $_POST ['email'];
-  $pass = $_POST ['pass'];
+  #2. mengambil value dari input
+  $email = $_POST['email'];
+  $pass = md5($_POST['pass']);
 
-  #tulis query pengecekan apakah data login tersedia di database
-  $sql_cek = "SELECT * FROM users WHERE email='email' AND password='$pass'";
+  #3. tulisklajn query pengecekan apakaha data login tersedia di database?
+  $sql_cek = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
 
-  #menjalankan query di atas
-  $qry_cek = mysql_query ($koneksi,$sql_cek);
+  #4. menjalankan query diatas
+  $qry_cek = mysqli_query($koneksi,$sql_cek); 
 
-  #pengecekan lanjutan
+  
+  
+  #5. pengecekan lanjutan
   $cek = mysqli_num_rows($qry_cek);
 
-  #buatkan if jika login berhasil atau gagal
+  #6. buatkan IF jika login berhasil atau gagal
   if($cek > 0){
-    #login berhasil
-  }else{
-    #login gagal
-  }
+    //login berhasil
+    #(OPTIONAL ) mengambil data lainnya dari tabel users berdasarkan data login
+    $ambil = mysqli_fetch_array($qry_cek);
+    $nama_login = $ambil['nama'];
+    $id_login = $ambil['id'];
+    
+    #Pembuatan Session
+    $_SESSION['sid'] = $id_login;
+    $_SESSION['semail'] = $email;
+    $_SESSION['snama'] = $nama_login;
 
+    #Pembuatan Cookie
+    if($_POST['cek'] == "yes"){
+      setcookie("cid",$id_login,time()+(60*60*24*90),"/");
+      setcookie("cemail",$email,time()+(60*60*24*90),"/");
+      setcookie("cnama",$nama_login,time()+(60*60*24*90),"/");
+    }
+
+    header("location:index.php");
+  }else{
+    //login gagal
+    $pesan = '<div class="alert alert-danger" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i> Login Gagal, Coba lagi!!!
+              </div>';
+  }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project IS62</title>
+    <title>Project</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -42,13 +64,14 @@ if(isset($_POST['tombol'])){
 <div class="container">
     <div class="row mt-5">
         <div class="col-8 m-auto">
+        <?=$pesan?>
             <div class="card">
             <div class="card-header text-center">
                 <h3>Sistem Informasi Mahasiswa</h3>
             </div>
             <div class="card-body">
 
-            <form method="post" action="proses_login.php">
+            <form method="post" action="login.php">
                 <div class="mb-3">
                                <label for="exampleInputEmail1" class="form-label">Email address</label>
                  <input type="email"  name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
