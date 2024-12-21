@@ -29,7 +29,7 @@
                         <th scope="col">Nama Mahasiswa</th>
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Jurusan</th>
-                        <th scope="col">nm_dos</th>
+                        <th scope="col">Nama Dosen</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>

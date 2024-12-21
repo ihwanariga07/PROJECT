@@ -78,7 +78,7 @@
                             $qry_dos = mysqli_query($koneksi,$sql_dos);
                             foreach($qry_dos as $data_dos){
                                 ?>
-                                <option value="<?=$data_dos['id']?>"><?=$data_dos['nama']?></option>
+                                <option value="<?=$data_dos['']?>"><?=$data_dos['nama']?></option>
                                 <?php
                             }
                         ?>

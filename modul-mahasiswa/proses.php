@@ -16,6 +16,7 @@ $dos = $_POST['dos'];
 $nama_foto = $_FILES['foto']['name'];
 $tmp_foto = $_FILES['foto']['tmp_name'];
 
+
 # Mapping data jenis kelamin
 if ($jk == "L") {
     $jk = "Laki-Laki";

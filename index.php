@@ -1,3 +1,7 @@
+<?php
+include_once ("ceklogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
