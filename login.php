@@ -44,7 +44,7 @@ if(isset($_POST['tombol'])){
   }else{
     //login gagal
     $pesan = '<div class="alert alert-danger" role="alert">
-                <i class="fa-solid fa-triangle-exclamation"></i> Login Gagal, Coba lagi!!!
+                <i class="fa-solid fa-triangle-exclamation"></i> Login Gagal, Pastikan Email dan Password Anda Benar!!!
               </div>';
   }
 }
