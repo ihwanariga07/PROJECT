@@ -85,6 +85,8 @@ if(isset($_POST['tombol'])){
                  <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
                </div>
                <button type="submit" name="tombol" class="btn btn-primary">Submit</button>
+               <!-- Tombol Buat Akun -->
+               <a href="/PROJECT/formakun/register.php" class="btn btn-secondary">Register</a>
              </form>
             </div>
             </div>
