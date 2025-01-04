@@ -28,7 +28,7 @@
 
       <a 
         class="btn btn-danger nav-link text-black" 
-        href="/PROJECT/logout.php" 
+        href="/PROJECT/frontpage.php" 
         onclick="return confirmLogout(event);"
       >Logout</a>
     </div>

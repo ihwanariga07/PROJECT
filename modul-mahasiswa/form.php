@@ -49,8 +49,8 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
                     <br>
-                    <input type="radio" name="jns_kel" value="L" class="" id="exampleInputPassword1"> Laki Laki
-                    <input type="radio" name="jns_kel" value="P" class="" id="exampleInputPassword1"> Perempuan
+                    <input type="radio" name="jns_kel" value="Laki Laki" class="" id="exampleInputPassword1"> Laki Laki
+                    <input type="radio" name="jns_kel" value="Perempuan" class="" id="exampleInputPassword1"> Perempuan
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jurusan</label>

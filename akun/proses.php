@@ -1,35 +1,26 @@
+
+
 <?php
-// Koneksi ke database
+#1. koneksikan file ini
 include("../koneksi.php");
 
-// Ambil data dari form
-$username = $_POST['username'];
-$password = $_POST['password'];
+#2. mengambil value dari form
 $email = $_POST['email'];
+$username = $_POST['username'];
 
-// Validasi input
-if (empty($username) || empty($password) || empty($email)) {
-    die("Error: Semua field harus diisi!");
-}
+$password = $_POST['password'];
 
-// Cek apakah username sudah ada di database
-$cek_user = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
-if (mysqli_num_rows($cek_user) > 0) {
-    die("Error: Username sudah terdaftar! Gunakan username yang berbeda.");
-}
 
-// Enkripsi password
-$hashed_password = password_hash($password, PASSWORD_BCRYPT);
+#3. menulis query
+$simpan = "INSERT INTO users (email,password,nama) VALUES ('$username','$email',
+'$password')";
 
-// Query untuk menyimpan data ke tabel users
-$query = "INSERT INTO users (username, password, email) VALUES ('$username', '$hashed_password', '$email')";
+#4. jalankan query
+$proses = mysqli_query($koneksi, $simpan);
 
-// Jalankan query
-$proses = mysqli_query($koneksi, $query);
-if ($proses) {
-    echo "<script>alert('Akun berhasil ditambahkan!');</script>";
-    echo "<script>document.location='index.php';</script>";
-} else {
-    die("Error saat menyimpan data: " . mysqli_error($koneksi));
-}
+#5. mengalihkan halaman
+// header("location:index.php");
 ?>
+<script>
+    document.location="../frontpage.php";
+</script>

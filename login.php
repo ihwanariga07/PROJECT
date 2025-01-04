@@ -86,7 +86,7 @@ if(isset($_POST['tombol'])){
                </div>
                <button type="submit" name="tombol" class="btn btn-primary">Submit</button>
                <!-- Tombol Buat Akun -->
-               <a href="/PROJECT/formakun/register.php" class="btn btn-secondary">Register</a>
+               
              </form>
             </div>
             </div>
