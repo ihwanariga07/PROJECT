@@ -143,13 +143,7 @@
         <!-- Deskripsi -->
         <p>Silakan login atau daftar untuk melanjutkan ke halaman berikutnya.</p>
         
-        <!-- Ikon Media Sosial -->
-        <div class="icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-        </div>
-
+  
         <!-- Tombol Login dan Register -->
         <div class="button-container">
             <form action="login.php" method="post" style="display: inline;">

@@ -67,6 +67,10 @@ if(isset($_POST['tombol'])){
         <?=$pesan?>
             <div class="card">
             <div class="card-header text-center">
+               <!-- Tombol Kembali -->
+               <a href="javascript:history.back()" class="btn btn-secondary btn-sm position-absolute" style="top: 10px; left: 10px;">
+                        <i class="fa fa-arrow-left"></i> Kembali
+                    </a>
                 <h3>Sistem Informasi Mahasiswa</h3>
             </div>
             <div class="card-body">
