@@ -56,7 +56,8 @@ if(isset($_POST['tombol'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css" href="fontawesome/all.min.css">
+
 </head>
 <body>
 
@@ -68,8 +69,8 @@ if(isset($_POST['tombol'])){
             <div class="card">
             <div class="card-header text-center">
                <!-- Tombol Kembali -->
-               <a href="javascript:history.back()" class="btn btn-secondary btn-sm position-absolute" style="top: 10px; left: 10px;">
-                        <i class="fa fa-arrow-left"></i> Kembali
+               <a href="javascript:history.back()"  class="btn btn-secondary btn-sm position-absolute" style="top: 10px; left: 10px;">
+               Kembali
                     </a>
                 <h3>Sistem Informasi Mahasiswa</h3>
             </div>
